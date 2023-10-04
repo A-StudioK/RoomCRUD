@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Room</string>
+    <string name="name">Enter name</string>
+    <string name="cell">Enter cell phone</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="add">Add</string>
+</resources>
