@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.room.R
 import com.example.room.adapter.ContactAdapter
-import com.example.room.adapter.onItemClickListener
+import com.example.room.adapter.OnItemClickListener
 import com.example.room.database.AppDatabase
 import com.example.room.models.Contact
 import com.google.gson.Gson
 
-class MainActivity : AppCompatActivity(), onItemClickListener {
+class MainActivity : AppCompatActivity(), OnItemClickListener {
     //Pass the values to ContactActivity
     override fun onItemClicked(contact: Contact) {
         val intent = Intent(this, ContactActivity::class.java)

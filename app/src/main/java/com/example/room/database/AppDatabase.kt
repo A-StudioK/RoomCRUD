@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.room.adapter.ContactDao
 import com.example.room.models.Contact
 
-@Database(entities = arrayOf(Contact::class), version = 1)
+@Database(entities = [Contact::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun getDao(): ContactDao
     companion object {

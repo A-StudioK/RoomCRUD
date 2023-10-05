@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.room.R
 import com.example.room.models.Contact
 
-class ContactAdapter(private val contacts: List<Contact>, private val itemClickListener: onItemClickListener) : Adapter<ContactPrototype>() {
+class ContactAdapter(private val contacts: List<Contact>, private val itemClickListener: OnItemClickListener) : Adapter<ContactPrototype>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactPrototype {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.prototype_contact, parent, false)
         return ContactPrototype(view)
@@ -30,7 +30,7 @@ class ContactPrototype(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val tvTelephone = itemView.findViewById<TextView>(R.id.tvTelf)
     private val cvContact = itemView.findViewById<CardView>(R.id.cvContact)!!
 
-    fun bind(contact: Contact, itemClickListener: onItemClickListener) {
+    fun bind(contact: Contact, itemClickListener: OnItemClickListener) {
         tvName.text = contact.name
         tvTelephone.text = contact.telephone
 
@@ -40,6 +40,6 @@ class ContactPrototype(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
 }
 
-interface onItemClickListener {
+interface OnItemClickListener {
     fun onItemClicked(contact: Contact)
 }
